@@ -68,7 +68,7 @@ A modern social media application built with Flutter. This app allows users to s
 ### Setup Steps
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/campus-social.git
+   git clone https://github.com/YusufAkin27/social_media.git
    cd campus-social
    ```
 
