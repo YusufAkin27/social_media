@@ -1,0 +1,2454 @@
+{
+	"info": {
+		"_postman_id": "cdbddc6c-9b86-4d7d-8b65-ddaea2ad942a",
+		"name": "sosyal medya",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26204022"
+	},
+	"item": [
+		{
+			"name": "öğrenci",
+			"item": [
+				{
+					"name": "kayıt ol",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Ali\",\r\n  \"lastName\": \"Yılmaz\",\r\n  \"username\": \"aliyilmaz\",\r\n  \"password\": \"123\",\r\n  \"email\": \"aliyilmaz@bingol.edu.tr\",\r\n  \"mobilePhone\": \"+905551234567\",\r\n  \"department\": \"COMPUTER_SCIENCE\", \r\n  \"faculty\": \"ENGINEERING\",\r\n  \"grade\": \"HAZIRLIK\",\r\n  \"birthDate\": \"2001-04-15\",\r\n  \"gender\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/student/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"student",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profil bilgileri",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbGl5aWxtYXoiLCJpYXQiOjE3Mzc1NzU2MDgsImV4cCI6MTczNzU3NjUwOCwidXNlck51bWJlciI6ImFsaXlpbG1heiIsInJvbGUiOlsiU1RVREVOVCJdfQ.CHoLxaVRUd6TRkEudK-jGLLaUYj_OqlRoJEsB930XUrVnbq0u2hd7yKbAnRxyPM8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/student/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"student",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bilgilerini güncelle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbGl5aWxtYXoiLCJpYXQiOjE3Mzc1NzU3NjYsImV4cCI6MTczNzU3NjY2NiwidXNlck51bWJlciI6ImFsaXlpbG1heiIsInJvbGUiOlsiU1RVREVOVCJdfQ.3GCBmEFAh25R47rASrrs4IXkyuXPERsJ12xQQfneNUFOXJ2sbVUvGT8rT_kG7A8P",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"ysuuf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/student/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"student",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profil fotoğrafı koy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbGl5aWxtYXoiLCJpYXQiOjE3Mzc1NzU3NjYsImV4cCI6MTczNzU3NjY2NiwidXNlck51bWJlciI6ImFsaXlpbG1heiIsInJvbGUiOlsiU1RVREVOVCJdfQ.3GCBmEFAh25R47rASrrs4IXkyuXPERsJ12xQQfneNUFOXJ2sbVUvGT8rT_kG7A8P",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/student/profile-photo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"student",
+								"profile-photo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profili gizle veya aç",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJuZXJnaXMiLCJpYXQiOjE3Mzc5OTY4NjUsImV4cCI6MTczNzk5Nzc2NSwidXNlck51bWJlciI6Im5lcmdpcyIsInJvbGUiOlsiU1RVREVOVCJdfQ.AZMKotGkWeQ2WQ8OypGyAl0scMfCEB15nqyvTjG7UdHNl1pffYPqDmrQvp_KDcxo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/student/change-private?isPrivate=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"student",
+								"change-private"
+							],
+							"query": [
+								{
+									"key": "isPrivate",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "arama",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJuZXJnaXMiLCJpYXQiOjE3Mzc5OTY4NjUsImV4cCI6MTczNzk5Nzc2NSwidXNlck51bWJlciI6Im5lcmdpcyIsInJvbGUiOlsiU1RVREVOVCJdfQ.AZMKotGkWeQ2WQ8OypGyAl0scMfCEB15nqyvTjG7UdHNl1pffYPqDmrQvp_KDcxo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/student/search?query=akin&page=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"student",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "akin"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "en popüler kişiler",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "hesap detayları",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtZWhtZXRBa2luIiwiaWF0IjoxNzM4MDU1NDE0LCJleHAiOjE3MzgwNTYzMTQsInVzZXJOdW1iZXIiOiJtZWhtZXRBa2luIiwicm9sZSI6WyJTVFVERU5UIl19.EHCqXOMP4ID2ke28NcDYYAEQs-91PWZ-gp7Kuz96kbAZC0njSL6Ngf00Cjf4kfzb",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/student/account-details/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"student",
+								"account-details",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "giriş yap",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"yusufAkin\",\r\n    \"password\":\"123\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiIxMTEiLCJpYXQiOjE3MzYyMTg1NjMsImV4cCI6MTc2Nzc1NDU2M30.6xznW8RDyzY4DJq37gdSdA_Q4QnGizzIDrYj-CzrZEh4KQn9Ck4gz7j7-ATtHgm_",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/auth/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": []
+		},
+		{
+			"name": "arkadaşlık istekleri",
+			"item": [
+				{
+					"name": "istek gönder",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbGl5aWxtYXoiLCJpYXQiOjE3Mzc3MTA1MjEsImV4cCI6MTczNzcxMTQyMSwidXNlck51bWJlciI6ImFsaXlpbG1heiIsInJvbGUiOlsiU1RVREVOVCJdfQ.iQiNOLdF2-J_qXIJ3cmB5IUIOuSboP3Nh1DG-ci-lPWvpeuteR3hHHgrH5aAr803",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/friendsRequest/send/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"friendsRequest",
+								"send",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gönderdiğim istekler",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJmYXRtYUFraW4iLCJpYXQiOjE3Mzc5NjczNTUsImV4cCI6MTczNzk2ODI1NSwidXNlck51bWJlciI6ImZhdG1hQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.dNJQ22YT6QXkkf-LWmYvoiXFkf2HuipkFaSzyMZC-05jNzlACUTzadevNfhgrVgO",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/friendsRequest/sent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"friendsRequest",
+								"sent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "isteği kabul et",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbGl5aWxtYXoiLCJpYXQiOjE3Mzc3MTA1MjEsImV4cCI6MTczNzcxMTQyMSwidXNlck51bWJlciI6ImFsaXlpbG1heiIsInJvbGUiOlsiU1RVREVOVCJdfQ.iQiNOLdF2-J_qXIJ3cmB5IUIOuSboP3Nh1DG-ci-lPWvpeuteR3hHHgrH5aAr803",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/friendsRequest/accept/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"friendsRequest",
+								"accept",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "isteği reddet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbGl5aWxtYXoiLCJpYXQiOjE3Mzc3MTA1MjEsImV4cCI6MTczNzcxMTQyMSwidXNlck51bWJlciI6ImFsaXlpbG1heiIsInJvbGUiOlsiU1RVREVOVCJdfQ.iQiNOLdF2-J_qXIJ3cmB5IUIOuSboP3Nh1DG-ci-lPWvpeuteR3hHHgrH5aAr803",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/friendsRequest/reject/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"friendsRequest",
+								"reject",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "isteği geri çek",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbGl5aWxtYXoiLCJpYXQiOjE3Mzc3MTA1MjEsImV4cCI6MTczNzcxMTQyMSwidXNlck51bWJlciI6ImFsaXlpbG1heiIsInJvbGUiOlsiU1RVREVOVCJdfQ.iQiNOLdF2-J_qXIJ3cmB5IUIOuSboP3Nh1DG-ci-lPWvpeuteR3hHHgrH5aAr803",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/friendsRequest/cancel/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"friendsRequest",
+								"cancel",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "istek detayları",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhbGl5aWxtYXoiLCJpYXQiOjE3Mzc3MTA1MjEsImV4cCI6MTczNzcxMTQyMSwidXNlck51bWJlciI6ImFsaXlpbG1heiIsInJvbGUiOlsiU1RVREVOVCJdfQ.iQiNOLdF2-J_qXIJ3cmB5IUIOuSboP3Nh1DG-ci-lPWvpeuteR3hHHgrH5aAr803",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/friendsRequest/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"friendsRequest",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gelen istekler",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "toplu istek onaylama",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtZWhtZXRBa2luIiwiaWF0IjoxNzM4MDA3NTY2LCJleHAiOjE3MzgwMDg0NjYsInVzZXJOdW1iZXIiOiJtZWhtZXRBa2luIiwicm9sZSI6WyJTVFVERU5UIl19.wayVuL01FYh3Ti4j3W3In-X5PC6_KConWYfd33fPGsxTkFv8j8NOxTJzjlq0mGEF",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[11,25,43]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/friendsRequest/accept-bulk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"friendsRequest",
+								"accept-bulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toplu istek silme",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtZWhtZXRBa2luIiwiaWF0IjoxNzM4MDA3NTY2LCJleHAiOjE3MzgwMDg0NjYsInVzZXJOdW1iZXIiOiJtZWhtZXRBa2luIiwicm9sZSI6WyJTVFVERU5UIl19.wayVuL01FYh3Ti4j3W3In-X5PC6_KConWYfd33fPGsxTkFv8j8NOxTJzjlq0mGEF",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/friendsRequest/reject-bulk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"friendsRequest",
+								"reject-bulk"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "takipçi",
+			"item": [
+				{
+					"name": "takip listem",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "takipçi listem",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "takip ettiğin birini çıkar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3Mzc5MTgyMjAsImV4cCI6MTczNzkxOTEyMCwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ._PANZnmxDAQboTL6ZfahYbBtH1Lx1J4gGvokAh8wvGgfOui_rZcgz-Fim9QhQg6k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/follow-relations/following/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"follow-relations",
+								"following",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "takipçini çıkar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/follow-relations/followers/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"follow-relations",
+								"followers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "takipçi arama",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3Mzc5MTgyMjAsImV4cCI6MTczNzkxOTEyMCwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ._PANZnmxDAQboTL6ZfahYbBtH1Lx1J4gGvokAh8wvGgfOui_rZcgz-Fim9QhQg6k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/follow-relations/followers/search?query",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"follow-relations",
+								"followers",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "takip arama",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtZWhtZXRBa2luIiwiaWF0IjoxNzM3OTc2MzYxLCJleHAiOjE3Mzc5NzcyNjEsInVzZXJOdW1iZXIiOiJtZWhtZXRBa2luIiwicm9sZSI6WyJTVFVERU5UIl19.G_NaiosM60AdCGHLmqsH3iIm5FA1SePiM-UfGmbq7SkNcMALfDDZdVHGivV_QPVD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/follow-relations/following/search?query=melis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"follow-relations",
+								"following",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "melis"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "takipçi sayısı",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "takip sayısı",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/follow-relations/following-count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"follow-relations",
+								"following-count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ortak takipçi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/follow-relations/common-followers/yusuf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"follow-relations",
+								"common-followers",
+								"yusuf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "postları",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/follow-relations/following/yusuf/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"follow-relations",
+								"following",
+								"yusuf",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "herhangi bi kullanıcını takipçi listesi",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "herhangi bi kullanıcının takip listesi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtZWhtZXRBa2luIiwiaWF0IjoxNzM4MDY3MzMxLCJleHAiOjE3MzgwNjgyMzEsInVzZXJOdW1iZXIiOiJtZWhtZXRBa2luIiwicm9sZSI6WyJTVFVERU5UIl19.tb4iw443bRHZUxGF6w7__CzSQcor7GWnhiO2TPCJcCGBT57LvxSHEP3d-eGiC2p-",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/follow-relations/following/nergis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"follow-relations",
+								"following",
+								"nergis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "takip listesinden arama",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtZWhtZXRBa2luIiwiaWF0IjoxNzM4MDY3MzMxLCJleHAiOjE3MzgwNjgyMzEsInVzZXJOdW1iZXIiOiJtZWhtZXRBa2luIiwicm9sZSI6WyJTVFVERU5UIl19.tb4iw443bRHZUxGF6w7__CzSQcor7GWnhiO2TPCJcCGBT57LvxSHEP3d-eGiC2p-",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/follow-relations/following/search/eylemAkin?query=nergis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"follow-relations",
+								"following",
+								"search",
+								"eylemAkin"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "nergis"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "takipçilerinden arama yapma",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtZWhtZXRBa2luIiwiaWF0IjoxNzM4MDY3MzMxLCJleHAiOjE3MzgwNjgyMzEsInVzZXJOdW1iZXIiOiJtZWhtZXRBa2luIiwicm9sZSI6WyJTVFVERU5UIl19.tb4iw443bRHZUxGF6w7__CzSQcor7GWnhiO2TPCJcCGBT57LvxSHEP3d-eGiC2p-",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/follow-relations/followers/search/eylemAkin?query=nergis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"follow-relations",
+								"followers",
+								"search",
+								"eylemAkin"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "nergis"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "engelleme",
+			"item": [
+				{
+					"name": "engelleme listesi",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "engel kaldır",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/block-relations/unblock/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"block-relations",
+								"unblock",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "engel var mı",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/block-relations/is-blocked/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"block-relations",
+								"is-blocked",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "engelleme tarihi",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "engel listesi sayısı",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/block-relations/block-count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"block-relations",
+								"block-count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "kullanıcı detayları",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/block-relations/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"block-relations",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "kullanıcı engelle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/block-relations/block/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"block-relations",
+								"block",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gönderi",
+			"item": [
+				{
+					"name": "yeni gönderi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtZWhtZXRBa2luIiwiaWF0IjoxNzM4MDgzOTA4LCJleHAiOjE3MzgwODQ4MDgsInVzZXJOdW1iZXIiOiJtZWhtZXRBa2luIiwicm9sZSI6WyJTVFVERU5UIl19.Ocbe7vYpCd3osqMhD9ENbPbDZ-1o15Sww687FCGK-eIjdPOzHXFJT9MtjiLxJs5R",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "description",
+									"value": "dsada",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "bingöl",
+									"type": "text"
+								},
+								{
+									"key": "tagAPerson[]",
+									"value": "yusufAkin",
+									"type": "text"
+								},
+								{
+									"key": "photos",
+									"type": "file",
+									"src": "postman-cloud:///1ef92ca5-c2bd-4400-a11d-055ea8e78578"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/post/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"post",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gönderi sil",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwODYwMDUsImV4cCI6MTczODA4NjkwNSwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.mlPKFl2aIKDUHyp_9Fx2XMDWQI9GurSgJa6Fw6YQrxEGyXw2yh4ksZvmWSEqYGO9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/post/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "güncelle",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "gönderi detayları",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwODYwMDUsImV4cCI6MTczODA4NjkwNSwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.mlPKFl2aIKDUHyp_9Fx2XMDWQI9GurSgJa6Fw6YQrxEGyXw2yh4ksZvmWSEqYGO9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/post/details/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"post",
+								"details",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "benim gönderilerim",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwODYwMDUsImV4cCI6MTczODA4NjkwNSwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.mlPKFl2aIKDUHyp_9Fx2XMDWQI9GurSgJa6Fw6YQrxEGyXw2yh4ksZvmWSEqYGO9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/post/my-posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"post",
+								"my-posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "kullanıcının göndeirleri",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwODYwMDUsImV4cCI6MTczODA4NjkwNSwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.mlPKFl2aIKDUHyp_9Fx2XMDWQI9GurSgJa6Fw6YQrxEGyXw2yh4ksZvmWSEqYGO9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/post/mehmetAkin/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"post",
+								"mehmetAkin",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "beğeni sayısı",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwODYwMDUsImV4cCI6MTczODA4NjkwNSwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.mlPKFl2aIKDUHyp_9Fx2XMDWQI9GurSgJa6Fw6YQrxEGyXw2yh4ksZvmWSEqYGO9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/post/like-count/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"post",
+								"like-count",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "yorum sayısı",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwODYwMDUsImV4cCI6MTczODA4NjkwNSwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.mlPKFl2aIKDUHyp_9Fx2XMDWQI9GurSgJa6Fw6YQrxEGyXw2yh4ksZvmWSEqYGO9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/post/comment-count/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"post",
+								"comment-count",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "beğeni detayları",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwODYwMDUsImV4cCI6MTczODA4NjkwNSwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.mlPKFl2aIKDUHyp_9Fx2XMDWQI9GurSgJa6Fw6YQrxEGyXw2yh4ksZvmWSEqYGO9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/post/like-details/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"post",
+								"like-details",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "yorum detayları",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwODYwMDUsImV4cCI6MTczODA4NjkwNSwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.mlPKFl2aIKDUHyp_9Fx2XMDWQI9GurSgJa6Fw6YQrxEGyXw2yh4ksZvmWSEqYGO9",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/post/comment-details/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"post",
+								"comment-details",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "hikaye",
+			"item": [
+				{
+					"name": "hikaye ekle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwOTE5OTIsImV4cCI6MTczODA5Mjg5MiwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.fAWjifMxIbYYGEdNnRdAzdVddmZAwLgDli41IpXOvGfSsxXN5edUQ3Z-BvRHsMPq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photos",
+									"type": "file",
+									"src": "postman-cloud:///1ef92ca5-c2bd-4400-a11d-055ea8e78578"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/api/story/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"story",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hikaye sil",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwOTE5OTIsImV4cCI6MTczODA5Mjg5MiwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.fAWjifMxIbYYGEdNnRdAzdVddmZAwLgDli41IpXOvGfSsxXN5edUQ3Z-BvRHsMPq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/story/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"story",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hikayeni getir",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwOTE5OTIsImV4cCI6MTczODA5Mjg5MiwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.fAWjifMxIbYYGEdNnRdAzdVddmZAwLgDli41IpXOvGfSsxXN5edUQ3Z-BvRHsMPq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/story/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"story",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hikayeni öne çıkar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwOTE5OTIsImV4cCI6MTczODA5Mjg5MiwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.fAWjifMxIbYYGEdNnRdAzdVddmZAwLgDli41IpXOvGfSsxXN5edUQ3Z-BvRHsMPq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/story/1/feature?featuredStoryId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"story",
+								"1",
+								"feature"
+							],
+							"query": [
+								{
+									"key": "featuredStoryId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tüm hikayelerim",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwOTE5OTIsImV4cCI6MTczODA5Mjg5MiwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.fAWjifMxIbYYGEdNnRdAzdVddmZAwLgDli41IpXOvGfSsxXN5edUQ3Z-BvRHsMPq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/story/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"story",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hikaye süresini uzat",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwOTE5OTIsImV4cCI6MTczODA5Mjg5MiwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.fAWjifMxIbYYGEdNnRdAzdVddmZAwLgDli41IpXOvGfSsxXN5edUQ3Z-BvRHsMPq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/story/1/extend?hours=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"story",
+								"1",
+								"extend"
+							],
+							"query": [
+								{
+									"key": "hours",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hikayemi görüntüleyenler",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwOTE5OTIsImV4cCI6MTczODA5Mjg5MiwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.fAWjifMxIbYYGEdNnRdAzdVddmZAwLgDli41IpXOvGfSsxXN5edUQ3Z-BvRHsMPq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/story/1/viewers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"story",
+								"1",
+								"viewers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "görüntüleme sayısı",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwOTE5OTIsImV4cCI6MTczODA5Mjg5MiwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.fAWjifMxIbYYGEdNnRdAzdVddmZAwLgDli41IpXOvGfSsxXN5edUQ3Z-BvRHsMPq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/story/1/views",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"story",
+								"1",
+								"views"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "en popüler hikayeler",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwOTE5OTIsImV4cCI6MTczODA5Mjg5MiwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.fAWjifMxIbYYGEdNnRdAzdVddmZAwLgDli41IpXOvGfSsxXN5edUQ3Z-BvRHsMPq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/story/popular",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"story",
+								"popular"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "kullanıcının aktif hikayelerini getir",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwOTE5OTIsImV4cCI6MTczODA5Mjg5MiwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.fAWjifMxIbYYGEdNnRdAzdVddmZAwLgDli41IpXOvGfSsxXN5edUQ3Z-BvRHsMPq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/story/user/yusufAkin/active",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"story",
+								"user",
+								"yusufAkin",
+								"active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hikaye yorumlarım",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwOTE5OTIsImV4cCI6MTczODA5Mjg5MiwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.fAWjifMxIbYYGEdNnRdAzdVddmZAwLgDli41IpXOvGfSsxXN5edUQ3Z-BvRHsMPq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/story/1/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"story",
+								"1",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hikayeyi görüntüle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwOTE5OTIsImV4cCI6MTczODA5Mjg5MiwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.fAWjifMxIbYYGEdNnRdAzdVddmZAwLgDli41IpXOvGfSsxXN5edUQ3Z-BvRHsMPq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/story/1/view",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"story",
+								"1",
+								"view"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "beğenenler",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgwOTE5OTIsImV4cCI6MTczODA5Mjg5MiwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.fAWjifMxIbYYGEdNnRdAzdVddmZAwLgDli41IpXOvGfSsxXN5edUQ3Z-BvRHsMPq",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/story/1/getLike",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"story",
+								"1",
+								"getLike"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "beğeni",
+			"item": [
+				{
+					"name": "gönderi beğen",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJleWxlbUFraW4iLCJpYXQiOjE3MzgxNDI5NzIsImV4cCI6MTczODE0Mzg3MiwidXNlck51bWJlciI6ImV5bGVtQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.HTL6tjtJeRnqb7-0meeF3DBIPPizDNbJfl6j35YST_6mWgnKEriziwOob14MzY8Z",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/likes/post/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"likes",
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "beğen hikaye",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJleWxlbUFraW4iLCJpYXQiOjE3MzgxNDI5NzIsImV4cCI6MTczODE0Mzg3MiwidXNlck51bWJlciI6ImV5bGVtQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.HTL6tjtJeRnqb7-0meeF3DBIPPizDNbJfl6j35YST_6mWgnKEriziwOob14MzY8Z",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/likes/story/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"likes",
+								"story",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "beğeniyi sil hikayeden",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJleWxlbUFraW4iLCJpYXQiOjE3MzgxNDI5NzIsImV4cCI6MTczODE0Mzg3MiwidXNlck51bWJlciI6ImV5bGVtQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.HTL6tjtJeRnqb7-0meeF3DBIPPizDNbJfl6j35YST_6mWgnKEriziwOob14MzY8Z",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/likes/story/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"likes",
+								"story",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gönderiden beğeniyi sil",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJleWxlbUFraW4iLCJpYXQiOjE3MzgxNDI5NzIsImV4cCI6MTczODE0Mzg3MiwidXNlck51bWJlciI6ImV5bGVtQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.HTL6tjtJeRnqb7-0meeF3DBIPPizDNbJfl6j35YST_6mWgnKEriziwOob14MzY8Z",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/likes/post/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"likes",
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "beğendiğim hikayeler",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJleWxlbUFraW4iLCJpYXQiOjE3MzgxNDI5NzIsImV4cCI6MTczODE0Mzg3MiwidXNlck51bWJlciI6ImV5bGVtQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.HTL6tjtJeRnqb7-0meeF3DBIPPizDNbJfl6j35YST_6mWgnKEriziwOob14MzY8Z",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/likes/stories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"likes",
+								"stories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "beğendiğim gönderiler",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJleWxlbUFraW4iLCJpYXQiOjE3MzgxNDI5NzIsImV4cCI6MTczODE0Mzg3MiwidXNlck51bWJlciI6ImV5bGVtQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.HTL6tjtJeRnqb7-0meeF3DBIPPizDNbJfl6j35YST_6mWgnKEriziwOob14MzY8Z",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/likes/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"likes",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bi tarihten sonra gelen beğeniler",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJleWxlbUFraW4iLCJpYXQiOjE3MzgxNDI5NzIsImV4cCI6MTczODE0Mzg3MiwidXNlck51bWJlciI6ImV5bGVtQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.HTL6tjtJeRnqb7-0meeF3DBIPPizDNbJfl6j35YST_6mWgnKEriziwOob14MzY8Z",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/likes/post/1/likes-after/29.01.25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"likes",
+								"post",
+								"1",
+								"likes-after",
+								"29.01.25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hikayemi kullanıcı beğenmiş mi?",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJleWxlbUFraW4iLCJpYXQiOjE3MzgxNDI5NzIsImV4cCI6MTczODE0Mzg3MiwidXNlck51bWJlciI6ImV5bGVtQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.HTL6tjtJeRnqb7-0meeF3DBIPPizDNbJfl6j35YST_6mWgnKEriziwOob14MzY8Z",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/likes/story/1/search/yusufAkin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"likes",
+								"story",
+								"1",
+								"search",
+								"yusufAkin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gönderimi kullanıcı beğeniş mi?",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJleWxlbUFraW4iLCJpYXQiOjE3MzgxNDI5NzIsImV4cCI6MTczODE0Mzg3MiwidXNlck51bWJlciI6ImV5bGVtQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.HTL6tjtJeRnqb7-0meeF3DBIPPizDNbJfl6j35YST_6mWgnKEriziwOob14MzY8Z",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/likes/post/1/search/yusufAkin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"likes",
+								"post",
+								"1",
+								"search",
+								"yusufAkin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "yorum",
+			"item": [
+				{
+					"name": "hikayeye yorum yap",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "gönderi yorum yap",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgxNzYxMDcsImV4cCI6MTczODE3NzAwNywidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.RxwiqP0AJiNZ2lbt0cnO9w224j2i8XhzU-PrYGowKD6f7ENT3g8dzFuRVdt9MQ9p",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/comments/post/1?content=bi nasıl gönderi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"comments",
+								"post",
+								"1"
+							],
+							"query": [
+								{
+									"key": "content",
+									"value": "bi nasıl gönderi"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "yorum detayı",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgxNzY0NzQsImV4cCI6MTczODE3NzM3NCwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.s4dfFJiJUkBGMn-fIXFUNgL9l1OUE-t8W-yqGUftzXGBFXCz0KzxltlmqG6A4VVB",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/comments/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"comments",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tüm yorumlarım",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "hikayemdeki yorumlar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgxNzY0NzQsImV4cCI6MTczODE3NzM3NCwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.s4dfFJiJUkBGMn-fIXFUNgL9l1OUE-t8W-yqGUftzXGBFXCz0KzxltlmqG6A4VVB",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/comments/story/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"comments",
+								"story",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gönderimdeki yorumlar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgxNzY0NzQsImV4cCI6MTczODE3NzM3NCwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.s4dfFJiJUkBGMn-fIXFUNgL9l1OUE-t8W-yqGUftzXGBFXCz0KzxltlmqG6A4VVB",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/comments/post/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"comments",
+								"post",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hikayede kullanıcı yorumu arama",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgxNzY0NzQsImV4cCI6MTczODE3NzM3NCwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.s4dfFJiJUkBGMn-fIXFUNgL9l1OUE-t8W-yqGUftzXGBFXCz0KzxltlmqG6A4VVB",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/comments/story/1/yusufAkin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"comments",
+								"story",
+								"1",
+								"yusufAkin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "kullanıcı arama gönderide",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ5dXN1ZkFraW4iLCJpYXQiOjE3MzgxNzY0NzQsImV4cCI6MTczODE3NzM3NCwidXNlck51bWJlciI6Inl1c3VmQWtpbiIsInJvbGUiOlsiU1RVREVOVCJdfQ.s4dfFJiJUkBGMn-fIXFUNgL9l1OUE-t8W-yqGUftzXGBFXCz0KzxltlmqG6A4VVB",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/api/comments/post/1/search/yusufAkin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"api",
+								"comments",
+								"post",
+								"1",
+								"search",
+								"yusufAkin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "yorum kaldırma",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
